@@ -9,6 +9,11 @@ import { ServicesComponent } from './services/services.component';
 
 export const routes: Routes = [
     {
+        path:"",
+        redirectTo:"login",
+        pathMatch:"full"
+    },
+    {
         path:"home",
         component:HomeComponent
     },
@@ -26,5 +31,10 @@ export const routes: Routes = [
     },{
         path:"about",
         component:AboutComponent
+    },
+    {
+        path:"**",
+        redirectTo:"login"
     }
+
 ];
